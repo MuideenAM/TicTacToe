@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context=".MainActivity">
+
+    <!-- 3 X 3 Board Setup starts here. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:weightSum="3">
+
+        <!-- First row containing 3 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/button00"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <!-- First row ends here. -->
+
+        <!-- Second row containing 3 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <!-- Second row ends here. -->
+
+        <!-- Third row containing 3 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+            android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:text=""
+                android:textSize="84sp"
+                android:textColor="@android:color/white"
+                android:layout_margin="5dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <!-- Third row ends here. -->
+
+    </LinearLayout>
+    <!-- 3 X 3 Board Setup ends here. -->
+
+    <!-- Game Control Buttons Setup strats here. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Textview"
+            android:textAlignment="center" /> -->
+
+        <Button
+            android:id="@+id/board_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="@string/_5by5"/>
+
+        <Button
+            android:id="@+id/play_stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="@string/play"/>
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="@string/reset"/>
+
+        <Button
+            android:id="@+id/player_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:text="@string/single_player"/>
+    </LinearLayout>
+    <!-- Game Control Setup ends here. -->
+</LinearLayout>
