@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     // Declare Button variables to store instances of variables.
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     Button button_play_stop, button_reset, button_board_change, button_player_select ;
     int turn; // Variable to change the turns of variables
     boolean end = false; // Variable to detect when the game ends
+    String player_type = "double";
+    String[][] board_cells = new String[3][3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,8 +100,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(button_player_select.getText().toString().equals("2 Players")){
                     button_player_select.setText(getString(R.string.single_player));
+                    player_type = "double";
                 }else{
                     button_player_select.setText(getString(R.string.double_players));
+                    player_type = "single";
                 }
             }
         });
@@ -108,15 +114,27 @@ public class MainActivity extends AppCompatActivity {
         button00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button00.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")){
+                    if(button00.getText().toString().equals("")){
+                        if(turn == 1){
+                            turn = 2;
+                            button00.setText("X");
+                        }else if(turn == 2){
+                            turn = 1;
+                            button00.setText("O");
+                        }
+                    }
+                }else{
+                    if(button00.getText().toString().equals("")){
                         button00.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button00.setText("O");
+                        board_cells[0][0] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
+
                 endGame();
             }
         });
@@ -127,13 +145,24 @@ public class MainActivity extends AppCompatActivity {
         button01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button01.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")){
+                    if(button01.getText().toString().equals("")){
+                        if(turn == 1){
+                            turn = 2;
+                            button01.setText("X");
+                        }else if(turn == 2){
+                            turn = 1;
+                            button01.setText("O");
+                        }
+                    }
+                }else {
+                    if (button01.getText().toString().equals("")) {
                         button01.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button01.setText("O");
+                        board_cells[0][1] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -146,13 +175,25 @@ public class MainActivity extends AppCompatActivity {
         button02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button02.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")) {
+                    if (button02.getText().toString().equals("")) {
+                        if (turn == 1) {
+                            turn = 2;
+                            button02.setText("X");
+                        } else if (turn == 2) {
+                            turn = 1;
+                            button02.setText("O");
+                        }
+                    }
+                }
+                else{
+                    if(button02.getText().toString().equals("")){
                         button02.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button02.setText("O");
+                        board_cells[0][2] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -165,13 +206,24 @@ public class MainActivity extends AppCompatActivity {
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button10.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")) {
+                    if (button10.getText().toString().equals("")) {
+                        if (turn == 1) {
+                            turn = 2;
+                            button10.setText("X");
+                        } else if (turn == 2) {
+                            turn = 1;
+                            button10.setText("O");
+                        }
+                    }
+                }else{
+                    if(button10.getText().toString().equals("")){
                         button10.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button10.setText("O");
+                        board_cells[1][0] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -184,13 +236,24 @@ public class MainActivity extends AppCompatActivity {
         button11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button11.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")) {
+                    if (button11.getText().toString().equals("")) {
+                        if (turn == 1) {
+                            turn = 2;
+                            button11.setText("X");
+                        } else if (turn == 2) {
+                            turn = 1;
+                            button11.setText("O");
+                        }
+                    }
+                }else{
+                    if(button11.getText().toString().equals("")){
                         button11.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button11.setText("O");
+                        board_cells[1][1] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -203,13 +266,24 @@ public class MainActivity extends AppCompatActivity {
         button12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button12.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")) {
+                    if (button12.getText().toString().equals("")) {
+                        if (turn == 1) {
+                            turn = 2;
+                            button12.setText("X");
+                        } else if (turn == 2) {
+                            turn = 1;
+                            button12.setText("O");
+                        }
+                    }
+                }else{
+                    if(button12.getText().toString().equals("")){
                         button12.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button12.setText("O");
+                        board_cells[1][2] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -222,13 +296,24 @@ public class MainActivity extends AppCompatActivity {
         button20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button20.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")) {
+                    if (button20.getText().toString().equals("")) {
+                        if (turn == 1) {
+                            turn = 2;
+                            button20.setText("X");
+                        } else if (turn == 2) {
+                            turn = 1;
+                            button20.setText("O");
+                        }
+                    }
+                }else{
+                    if(button20.getText().toString().equals("")){
                         button20.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button20.setText("O");
+                        board_cells[2][0] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -241,13 +326,24 @@ public class MainActivity extends AppCompatActivity {
         button21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button21.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")) {
+                    if (button21.getText().toString().equals("")) {
+                        if (turn == 1) {
+                            turn = 2;
+                            button21.setText("X");
+                        } else if (turn == 2) {
+                            turn = 1;
+                            button21.setText("O");
+                        }
+                    }
+                }else{
+                    if(button21.getText().toString().equals("")){
                         button21.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button21.setText("O");
+                        board_cells[2][1] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -260,13 +356,24 @@ public class MainActivity extends AppCompatActivity {
         button22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(button22.getText().toString().equals("")){
-                    if(turn == 1){
-                        turn = 2;
+                if(player_type.equals("double")) {
+                    if (button22.getText().toString().equals("")) {
+                        if (turn == 1) {
+                            turn = 2;
+                            button22.setText("X");
+                        } else if (turn == 2) {
+                            turn = 1;
+                            button22.setText("O");
+                        }
+                    }
+                }else{
+                    if(button22.getText().toString().equals("")){
                         button22.setText("X");
-                    }else if(turn == 2){
-                        turn = 1;
-                        button22.setText("O");
+                        board_cells[2][2] = "X";
+                        endGame();
+                        if(!end) {
+                            computerPlay();
+                        }
                     }
                 }
                 endGame();
@@ -279,6 +386,12 @@ public class MainActivity extends AppCompatActivity {
      * Initialises the board by disabling game play mode. It also informs the Player(s) of the actions to take in order to play game.
      */
     public void initialiseGame(){
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                board_cells[i][j] = "";
+            }
+        }
+        end = true;
         button00.setEnabled(false);
         button01.setEnabled(false);
         button02.setEnabled(false);
@@ -288,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
         button20.setEnabled(false);
         button21.setEnabled(false);
         button22.setEnabled(false);
-        Toast.makeText(MainActivity.this,"Click Start button to start playing.",Toast.LENGTH_LONG * 2).show();
+        Toast.makeText(MainActivity.this,"Click Play button to start playing.",Toast.LENGTH_LONG ).show();
     }
 
     /*
@@ -307,6 +420,11 @@ public class MainActivity extends AppCompatActivity {
         val20 = button20.getText().toString();
         val21 = button21.getText().toString();
         val22 = button22.getText().toString();
+
+        if(fullyFilled(board_cells)){
+            Toast.makeText(MainActivity.this, "Board Fully filled!", Toast.LENGTH_LONG).show();
+            return;
+        }
         //First row winning for X
         if (val00.equals("X") && val01.equals("X") & val02.equals("X")){
             Toast.makeText(MainActivity.this, "Winner Player X!", Toast.LENGTH_LONG).show();
@@ -411,5 +529,65 @@ public class MainActivity extends AppCompatActivity {
             button21.setEnabled(true);
             button22.setEnabled(true);
         }
+    }
+
+    public void computerPlay(){
+        boolean played = false;
+        while(!played){
+            Random rand = new Random();
+            int row = rand.nextInt(3),
+                    col = rand.nextInt(3);
+            if(board_cells[row][col].equals("")){
+                switch (row){
+                    case 0:
+                        if(col == 0){
+                            button00.setText("O");
+                            played = true;
+                        }else if(col == 1){
+                            button01.setText("O");
+                            played = true;
+                        }else{
+                            button02.setText("O");
+                            played = true;
+                        }
+                        break;
+                    case 1:
+                        if(col == 0){
+                            button10.setText("O");
+                            played = true;
+                        }else if(col == 1){
+                            button11.setText("O");
+                            played = true;
+                        }else{
+                            button12.setText("O");
+                            played = true;
+                        }
+                        break;
+                    case 2:
+                        if(col == 0){
+                            button20.setText("O");
+                            played = true;
+                        }else if(col == 1){
+                            button21.setText("O");
+                            played = true;
+                        }else{
+                            button22.setText("O");
+                            played = true;
+                        }
+                        break;
+                }
+            }
+        }
+    }
+
+    public boolean fullyFilled(String[][] cells){
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                if(cells[i][j].equals("")){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
