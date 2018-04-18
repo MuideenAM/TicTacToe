@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TicTacToe</string>
+    <string name="app_name">Tic Tac Toe</string>
     <string name="play">Play</string>
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
@@ -7,4 +7,13 @@
     <string name="_3by3">3 X 3</string>
     <string name="double_players">2 Players</string>
     <string name="single_player">1 Player</string>
+    <string-array name="player_marker">
+        <item>X</item>
+        <item>O</item>
+    </string-array>
+    <string name="player_label">Player</string>
+    <string name="computer_label">Computer</string>
+    <string name="vs">Vs</string>
+    <string name="x">X</string>
+    <string name="o">O</string>
 </resources>

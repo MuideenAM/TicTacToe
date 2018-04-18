@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="3"
+    android:weightSum="5"
     tools:context=".MainActivity">
 
     <!-- 3 X 3 Board Setup starts here. -->
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="2"
+        android:layout_weight="3"
         android:weightSum="3">
 
         <!-- First row containing 3 columns starts here. -->
@@ -209,4 +209,96 @@
             android:text="@string/single_player"/>
     </LinearLayout>
     <!-- Game Control Setup ends here. -->
+
+    <!-- Game Score Board starts here. -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="13"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/player_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/player_marker"></Spinner>
+
+        <TextView
+            android:id="@+id/textview_player1_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/vs"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            />
+
+        <TextView
+            android:id="@+id/textview_player2_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/textview_player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/player_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/player_marker"></Spinner>
+
+    </LinearLayout>
+    <!-- Game Score Board ends here. -->
 </LinearLayout>
