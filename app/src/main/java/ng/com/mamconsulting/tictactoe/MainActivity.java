@@ -225,7 +225,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[0][0] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -256,7 +258,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[0][1] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -287,7 +291,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[0][2] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -317,7 +323,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[1][0] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -347,7 +355,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[1][1] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -377,7 +387,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[1][2] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -407,7 +419,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[2][0] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -437,7 +451,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[2][1] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -467,7 +483,9 @@ public class MainActivity extends AppCompatActivity {
                         board_cells[2][2] = player1_marker;
                         endGame();
                         if(!end) {
-                            computerPlay();
+                            if(!(intelligentBlocking() || intelligentWinning())) {
+                                computerPlay();
+                            }
                         }
                     }
                 }
@@ -728,5 +746,159 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return true;
+    }
+
+    public boolean intelligentWinning(){
+        if(button00.getText().toString().equals(player2_marker) && button01.getText().toString().equals(player2_marker) && button02.getText().toString().equals("")){
+            button02.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player2_marker) && button02.getText().toString().equals(player2_marker) && button01.getText().toString().equals("")){
+            button01.setText(player2_marker);
+            return true;
+        }else if(button01.getText().toString().equals(player2_marker) && button02.getText().toString().equals(player2_marker) && button00.getText().toString().equals("")){
+            button00.setText(player2_marker);
+            return true;
+        }else if(button10.getText().toString().equals(player2_marker) && button11.getText().toString().equals(player2_marker) && button12.getText().toString().equals("")){
+            button12.setText(player2_marker);
+            return true;
+        }else if(button10.getText().toString().equals(player2_marker) && button12.getText().toString().equals(player2_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player2_marker) && button12.getText().toString().equals(player2_marker) && button10.getText().toString().equals("")){
+            button10.setText(player2_marker);
+            return true;
+        }else if(button20.getText().toString().equals(player2_marker) && button21.getText().toString().equals(player2_marker) && button22.getText().toString().equals("")) {
+            button22.setText(player2_marker);
+            return true;
+        }else if(button20.getText().toString().equals(player2_marker) && button22.getText().toString().equals(player2_marker) && button21.getText().toString().equals("")){
+            button21.setText(player2_marker);
+            return true;
+        }else if(button21.getText().toString().equals(player2_marker) && button22.getText().toString().equals(player2_marker) && button20.getText().toString().equals("")){
+            button20.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player2_marker) && button10.getText().toString().equals(player2_marker) && button20.getText().toString().equals("")){
+            button20.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player2_marker) && button20.getText().toString().equals(player2_marker) && button10.getText().toString().equals("")){
+            button10.setText(player2_marker);
+            return true;
+        }else if(button10.getText().toString().equals(player2_marker) && button20.getText().toString().equals(player2_marker) && button00.getText().toString().equals("")){
+            button00.setText(player2_marker);
+            return true;
+        }else if(button01.getText().toString().equals(player2_marker) && button11.getText().toString().equals(player2_marker) && button21.getText().toString().equals("")){
+            button21.setText(player2_marker);
+            return true;
+        }else if(button01.getText().toString().equals(player2_marker) && button21.getText().toString().equals(player2_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player2_marker) && button21.getText().toString().equals(player2_marker) && button01.getText().toString().equals("")){
+            button01.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player2_marker) && button12.getText().toString().equals(player2_marker) && button22.getText().toString().equals("")){
+            button22.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player2_marker) && button22.getText().toString().equals(player2_marker) && button12.getText().toString().equals("")){
+            button12.setText(player2_marker);
+            return true;
+        }else if(button12.getText().toString().equals(player2_marker) && button22.getText().toString().equals(player2_marker) && button02.getText().toString().equals("")) {
+            button02.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player2_marker) && button11.getText().toString().equals(player2_marker) && button22.getText().toString().equals("")){
+            button22.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player2_marker) && button22.getText().toString().equals(player2_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player2_marker) && button22.getText().toString().equals(player2_marker) && button00.getText().toString().equals("")) {
+            button00.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player2_marker) && button11.getText().toString().equals(player2_marker) && button20.getText().toString().equals("")){
+            button20.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player2_marker) && button20.getText().toString().equals(player2_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player2_marker) && button20.getText().toString().equals(player2_marker) && button02.getText().toString().equals("")) {
+            button02.setText(player2_marker);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean intelligentBlocking(){
+        if(button00.getText().toString().equals(player1_marker) && button01.getText().toString().equals(player1_marker) && button02.getText().toString().equals("")){
+            button02.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player1_marker) && button02.getText().toString().equals(player1_marker) && button01.getText().toString().equals("")){
+            button01.setText(player2_marker);
+            return true;
+        }else if(button01.getText().toString().equals(player1_marker) && button02.getText().toString().equals(player1_marker) && button00.getText().toString().equals("")){
+            button00.setText(player2_marker);
+            return true;
+        }else if(button10.getText().toString().equals(player1_marker) && button11.getText().toString().equals(player1_marker) && button12.getText().toString().equals("")){
+            button12.setText(player2_marker);
+            return true;
+        }else if(button10.getText().toString().equals(player1_marker) && button12.getText().toString().equals(player1_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player1_marker) && button12.getText().toString().equals(player1_marker) && button10.getText().toString().equals("")){
+            button10.setText(player2_marker);
+            return true;
+        }else if(button20.getText().toString().equals(player1_marker) && button21.getText().toString().equals(player1_marker) && button22.getText().toString().equals("")) {
+            button22.setText(player2_marker);
+            return true;
+        }else if(button20.getText().toString().equals(player1_marker) && button22.getText().toString().equals(player1_marker) && button21.getText().toString().equals("")){
+            button21.setText(player2_marker);
+            return true;
+        }else if(button21.getText().toString().equals(player1_marker) && button22.getText().toString().equals(player1_marker) && button20.getText().toString().equals("")){
+            button20.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player1_marker) && button10.getText().toString().equals(player1_marker) && button20.getText().toString().equals("")){
+            button20.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player1_marker) && button20.getText().toString().equals(player1_marker) && button10.getText().toString().equals("")){
+            button10.setText(player2_marker);
+            return true;
+        }else if(button10.getText().toString().equals(player1_marker) && button20.getText().toString().equals(player1_marker) && button00.getText().toString().equals("")){
+            button00.setText(player2_marker);
+            return true;
+        }else if(button01.getText().toString().equals(player1_marker) && button11.getText().toString().equals(player1_marker) && button21.getText().toString().equals("")){
+            button21.setText(player2_marker);
+            return true;
+        }else if(button01.getText().toString().equals(player1_marker) && button21.getText().toString().equals(player1_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player1_marker) && button21.getText().toString().equals(player1_marker) && button01.getText().toString().equals("")){
+            button01.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player1_marker) && button12.getText().toString().equals(player1_marker) && button22.getText().toString().equals("")){
+            button22.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player1_marker) && button22.getText().toString().equals(player1_marker) && button12.getText().toString().equals("")){
+            button12.setText(player2_marker);
+            return true;
+        }else if(button12.getText().toString().equals(player1_marker) && button22.getText().toString().equals(player1_marker) && button02.getText().toString().equals("")) {
+            button02.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player1_marker) && button11.getText().toString().equals(player1_marker) && button22.getText().toString().equals("")){
+            button22.setText(player2_marker);
+            return true;
+        }else if(button00.getText().toString().equals(player1_marker) && button22.getText().toString().equals(player1_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player1_marker) && button22.getText().toString().equals(player1_marker) && button00.getText().toString().equals("")) {
+            button00.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player1_marker) && button11.getText().toString().equals(player1_marker) && button20.getText().toString().equals("")){
+            button20.setText(player2_marker);
+            return true;
+        }else if(button02.getText().toString().equals(player1_marker) && button20.getText().toString().equals(player1_marker) && button11.getText().toString().equals("")){
+            button11.setText(player2_marker);
+            return true;
+        }else if(button11.getText().toString().equals(player1_marker) && button20.getText().toString().equals(player1_marker) && button02.getText().toString().equals("")) {
+            button02.setText(player2_marker);
+            return true;
+        }
+        return false;
     }
 }
