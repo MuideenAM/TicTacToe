@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context="._5by5Board">
+
+    <!-- 3 X 3 Board Setup starts here. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:weightSum="5">
+
+        <!-- First row containing 3 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/button00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content"
+                tools:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <!-- First row ends here. -->
+
+        <!-- Second row containing 3 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+        </LinearLayout>
+        <!-- Second row ends here. -->
+
+        <!-- Third row containing 3 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp" />
+
+        </LinearLayout>
+        <!-- Third row ends here. -->
+
+        <!-- Fourth row containing 5 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button33"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button34"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <!-- Fourth row ends here. -->
+
+        <!-- Fifth row containing 5 columns starts here. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/button40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button41"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button42"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button43"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button44"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="60sp"
+                tools:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <!-- Fifth row ends here. -->
+
+    </LinearLayout>
+    <!-- 5 X 5 Board Setup ends here. -->
+
+    <!-- Game Control Buttons Setup strats here. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/board_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/_5by5"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/play_stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/play"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/reset"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/player_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/single_player"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!-- Game Control Setup ends here. -->
+
+    <!-- Game Score Board starts here. -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="13"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/player_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/player_marker"></Spinner>
+
+        <TextView
+            android:id="@+id/textview_player1_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/vs"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            />
+
+        <TextView
+            android:id="@+id/textview_player2_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/textview_player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/player_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/player_marker"></Spinner>
+
+    </LinearLayout>
+    <!-- Game Score Board ends here. -->
+</LinearLayout>
