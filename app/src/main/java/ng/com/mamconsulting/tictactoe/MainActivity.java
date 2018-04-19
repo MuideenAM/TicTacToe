@@ -49,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
         player1_spinner = findViewById(R.id.spinner_player1);
         player2_spinner = findViewById(R.id.spinner_player2);
 
-        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(),R.array.player_marker, android.R.layout.simple_spinner_item);
-        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //player1_spinner.setAdapter(adapter);
-        //player2_spinner.setAdapter(adapter);
         player1_spinner.setSelection(0);
         player1_marker = getString(R.string.x);
         player2_spinner.setSelection(1);
