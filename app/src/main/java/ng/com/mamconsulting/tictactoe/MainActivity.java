@@ -97,14 +97,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 end = !end;
-                if(end && point_taken){
+                if(end || point_taken){
                     endGame();
                     button_play_stop.setText(getString(R.string.play));
                     point_taken = false;
                     Toast.makeText(getApplicationContext(), "Reset the board to start new game.", Toast.LENGTH_LONG).show();
-                }else if(end){
-                    endGame();
-                    button_play_stop.setText(getString(R.string.play));
                 }else{
                     endGame();
                     button_play_stop.setText(getString(R.string.stop));
@@ -510,6 +507,7 @@ public class MainActivity extends AppCompatActivity {
         button21.setEnabled(false);
         button22.setEnabled(false);
         Toast.makeText(MainActivity.this,"Click Play button to start playing.",Toast.LENGTH_LONG ).show();
+        end = true;
     }
 
     /*
